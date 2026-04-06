@@ -11,5 +11,10 @@
 * **Steps:** Added a **Rigidbody** component to the Player. Created a C# script named `PlayerController`.
 * **What I Learned:** I learned how to use Unity's Physics system and how to read player input.
 
-
+## 3. Moving the Camera (Kameranın Hareketi)
+* **Steps:** Main Camera için `CameraController` adında bir script oluşturdum. Kamerayı oyuncunun (Player) içine atmak yerine, aradaki mesafeyi (offset) hesaplayan bir kod yazdım.
+* **What I Learned:** `Update` ve `LateUpdate` arasındaki farkı öğrendim. Kamerayı `LateUpdate` içinde hareket ettirmenin, oyuncu hareket ettikten sonra kameranın konumunu güncellediği için daha sarsıntısız (smooth) bir görüntü sunduğunu fark ettim.
+* **Errors & Fixes:**
+    - **Error:** Kamerayı doğrudan Player objesinin içine (child) sürüklediğimde, top her döndüğünde kamera da topun etrafında dönmeye başladı ve görüntü bozuldu.
+    - **Fix:** Kamerayı Player'ın içinden çıkardım ve script yardımıyla oyuncu ile kamera arasındaki mesafeyi sabitleyerek (offset) sorunu çözdüm.
 
