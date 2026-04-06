@@ -42,3 +42,9 @@
 * **Errors & Fixes:**
     - **Error:** Kod yazarken `TextMeshProUGUI` tipini kullandığımda hata aldım.
     - **Fix:** Script'in en üstüne `using TMPro;` satırını eklemeyi unuttuğumu fark ettim. Ayrıca ilk başta Text ekranda gözükmedi; Canvas ayarlarından "UI Scale Mode" kısmını "Scale With Screen Size" yaparak farklı çözünürlüklerde görünür olmasını sağladım.
+
+## 8. Adding AI Navigation (Yapay Zeka Navigasyonu)
+* **Steps:** Sahneye bir düşman (Enemy) objesi ekledim ve buna **NavMesh Agent** bileşeni atadım. Zemini (Ground) navigasyon alanı olarak belirlemek için **NavMesh Surface** kullanarak "Bake" işlemini gerçekleştirdim. Düşmanın oyuncuyu takip etmesi için basit bir C# takip script'i yazdım.
+* **What I Learned:** Unity'nin NavMesh sistemini kullanarak bir objeye "yol bulma" (pathfinding) yeteneği kazandırmayı öğrendim. Dinamik ve statik objelerin navigasyon üzerindeki etkilerini kavradım.
+
+
