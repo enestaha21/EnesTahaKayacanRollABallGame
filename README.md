@@ -36,3 +36,9 @@
     - **Error:** Oyuncu küplere çarptığında küpler kaybolmuyor, aksine oyuncuyu geri itiyordu.
     - **Fix:** Collectible objelerinin (Pick Up) üzerindeki Box Collider bileşeninde "Is Trigger" kutucuğunun işaretli olması gerektiğini fark ettim. Ayrıca script içinde "Pick Up" etiketinin büyük/küçük harf duyarlı olduğunu (Case-sensitive) öğrendim.
 
+## 7. Displaying the Score and Text (Puanın Görüntülenmesi)
+* **Steps:** Hiyerarşide bir **UI > Text - TextMeshPro** objesi oluşturdum. `PlayerController` scripti içinde `count` adında bir değişken tanımladım ve her obje toplandığında bu değeri artırıp ekrana yazdırdım.
+* **What I Learned:** Unity'de UI (Kullanıcı Arayüzü) sisteminin 3D dünyadan farklı bir katmanda (Canvas) çalıştığını öğrendim. **TextMeshPro** kütüphanesini projeye dahil etmeyi ve kod içinde `using TMPro;` ad alanını (namespace) kullanmayı kavradım.
+* **Errors & Fixes:**
+    - **Error:** Kod yazarken `TextMeshProUGUI` tipini kullandığımda hata aldım.
+    - **Fix:** Script'in en üstüne `using TMPro;` satırını eklemeyi unuttuğumu fark ettim. Ayrıca ilk başta Text ekranda gözükmedi; Canvas ayarlarından "UI Scale Mode" kısmını "Scale With Screen Size" yaparak farklı çözünürlüklerde görünür olmasını sağladım.
