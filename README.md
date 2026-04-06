@@ -28,3 +28,11 @@
     ## 5. Creating Collectibles (Toplanabilir Objelerin Oluşturulması)
 * **Steps:** Oyuncunun toplayacağı küpleri oluşturdum ve bunlara kendi etrafında dönmelerini sağlayan bir `Rotator` script'i yazdım. Objeleri daha kolay yönetmek için **Prefab** sistemini kullandım.
 * **What I Learned:** Prefab sisteminin, bir objenin kopyalarını (instance) tek bir merkezden yönetmek için ne kadar güçlü olduğunu öğrendim.
+
+## 6. Detecting Collisions (Çarpışmaları Algılama)
+* **Steps:** PlayerController script'i içine `OnTriggerEnter` fonksiyonunu ekledim. Oyuncu "Pick Up" etiketine (tag) sahip bir objeye çarptığında, o objenin pasif hale gelmesini (`SetActive(false)`) sağladım.
+* **What I Learned:** `OnCollisionEnter` (fiziksel çarpışma) ve `OnTriggerEnter` (içinden geçme) arasındaki farkı öğrendim. Tetikleyicilerin (Triggers) fiziksel bir tepki vermeden sadece bir olayı başlatmak için kullanıldığını kavradım.
+* **Errors & Fixes:**
+    - **Error:** Oyuncu küplere çarptığında küpler kaybolmuyor, aksine oyuncuyu geri itiyordu.
+    - **Fix:** Collectible objelerinin (Pick Up) üzerindeki Box Collider bileşeninde "Is Trigger" kutucuğunun işaretli olması gerektiğini fark ettim. Ayrıca script içinde "Pick Up" etiketinin büyük/küçük harf duyarlı olduğunu (Case-sensitive) öğrendim.
+
