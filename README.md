@@ -24,3 +24,7 @@
 * **Errors & Fixes:**
     - **Error:** Duvarları tek tek oluşturduğumda hiyerarşi çok kalabalık ve karışık göründü.
     - **Fix:** Bir "Empty GameObject" oluşturup tüm duvarları onun içine sürükledim. Böylece hiyerarşiyi hocanın istediği gibi tertemiz ve organize bir hale getirdim.
+
+    ## 5. Creating Collectibles (Toplanabilir Objelerin Oluşturulması)
+* **Steps:** Oyuncunun toplayacağı küpleri oluşturdum ve bunlara kendi etrafında dönmelerini sağlayan bir `Rotator` script'i yazdım. Objeleri daha kolay yönetmek için **Prefab** sistemini kullandım.
+* **What I Learned:** Prefab sisteminin, bir objenin kopyalarını (instance) tek bir merkezden yönetmek için ne kadar güçlü olduğunu öğrendim.
