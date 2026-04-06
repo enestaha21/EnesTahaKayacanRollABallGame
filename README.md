@@ -18,3 +18,9 @@
     - **Error:** Kamerayı doğrudan Player objesinin içine (child) sürüklediğimde, top her döndüğünde kamera da topun etrafında dönmeye başladı ve görüntü bozuldu.
     - **Fix:** Kamerayı Player'ın içinden çıkardım ve script yardımıyla oyuncu ile kamera arasındaki mesafeyi sabitleyerek (offset) sorunu çözdüm.
 
+## 4. Setting Up the Play Area (Oyun Alanının Kurulması)
+* **Steps:** Oyun alanının etrafına topun dışarı düşmesini engelleyecek duvarlar (North, South, East, West Walls) ekledim. Tüm duvarları hiyerarşide düzenli durması için "Walls" adında boş bir GameObject'in (Empty Parent) altına topladım.
+* **What I Learned:** "Parent-Child" (Ebeveyn-Çocuk) ilişkisini ve hiyerarşiyi düzenli tutmanın önemini öğrendim. Ayrıca objeleri sahnede hızlıca hizalamak için "Transform" değerlerini manuel olarak ayarlamayı pratik ettim.
+* **Errors & Fixes:**
+    - **Error:** Duvarları tek tek oluşturduğumda hiyerarşi çok kalabalık ve karışık göründü.
+    - **Fix:** Bir "Empty GameObject" oluşturup tüm duvarları onun içine sürükledim. Böylece hiyerarşiyi hocanın istediği gibi tertemiz ve organize bir hale getirdim.
